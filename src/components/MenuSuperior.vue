@@ -4,6 +4,11 @@ import { ref } from 'vue'
 import CartPlus from 'vue-material-design-icons/CartPlus.vue'
 import Account from 'vue-material-design-icons/Account.vue'
 import Menu from 'vue-material-design-icons/Menu.vue'
+import Home from 'vue-material-design-icons/Home.vue'
+import DiamondStone from 'vue-material-design-icons/DiamondStone.vue'
+import HumanMale from 'vue-material-design-icons/HumanMale.vue'
+import HumanFemale from 'vue-material-design-icons/HumanFemale.vue'
+import MonitorCellphone from 'vue-material-design-icons/MonitorCellphone.vue'
 
 const menuAberto = ref(false)
 </script>
@@ -11,7 +16,6 @@ const menuAberto = ref(false)
   <header>
     <div class="header--logo">
       <img src="@/assets/logoFakeStore.png" alt="Logo" />
-      <h1>FakeStore</h1>
     </div>
     <nav>
       <ul :class="menuAberto ? 'menu' : ''">
