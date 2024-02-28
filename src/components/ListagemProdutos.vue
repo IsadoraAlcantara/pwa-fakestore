@@ -33,7 +33,7 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`
     gap: 0.5rem;
   }
   .card {
-    width: 92%;
+    width: 90%;
   }
 }
 

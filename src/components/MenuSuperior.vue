@@ -19,11 +19,26 @@ const menuAberto = ref(false)
     </div>
     <nav>
       <ul :class="menuAberto ? 'menu' : ''">
-        <li>Home</li>
-        <li>Eletrônicos</li>
-        <li>Jóias</li>
-        <li>Masculino</li>
-        <li>Feminino</li>
+        <div class="line">
+          <Home class="icon" size="20px" @click="menuAberto = !menuAberto" />
+          <li>Home</li>
+        </div>
+        <div class="line">
+          <MonitorCellphone class="icon" size="20px" @click="menuAberto = !menuAberto" />
+          <li>Eletrônicos</li>
+        </div>
+        <div class="line">
+          <DiamondStone class="icon" size="20px" @click="menuAberto = !menuAberto" />
+          <li>Jóias</li>
+        </div>
+        <div class="line">
+          <HumanMale class="icon" size="20px" @click="menuAberto = !menuAberto" />
+          <li>Masculino</li>
+        </div>
+        <div class="line">
+          <HumanFemale class="icon" size="20px" @click="menuAberto = !menuAberto" />
+          <li>Feminino</li>
+        </div>  
       </ul>
     </nav>
     <div class="header--icons">
@@ -70,6 +85,10 @@ nav li {
   display: none;
 }
 
+.icon {
+  display: none;
+}
+
 @media (max-width: 768px) {
   nav ul {
     display: none;
@@ -78,7 +97,12 @@ nav li {
     display: block;
   }
 
+  .icon {
+    display: block;
+  }
+
   nav .menu {
+    height: 37%;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -88,12 +112,31 @@ nav li {
       0 6px 6px rgba(0, 0, 0, 0.23);
     border-radius: 10px;
     right: 0;
-    text-align: right;
-    padding: 10px 16px;
+    text-align: left;
+    padding: 15px 16px 0 10px;
   }
   nav .menu li {
     display: block;
-    margin-top: 12px;
+    padding-left: 1vw;
+  }
+
+.line .icon, .line li {
+  color: #4f4f50;
+}
+
+
+.line:hover > .icon, .line:hover > li {
+    color: #222629;
+  }
+  .line {
+    display: flex;
+    gap: 1vw;
+    padding: 5px 7px;
+  }
+
+  .line:hover {
+    background-color: #EFEFEF;
+    border-radius: 5px;
   }
 }
 </style>
