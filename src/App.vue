@@ -1,9 +1,34 @@
 <script setup>
-import ListagemProdutos from '@/components/ListagemProdutos.vue';
-import MenuSuperior from '@/components/MenuSuperior.vue';
+import ListagemProdutos from '@/components/ListagemProdutos.vue'
+import MenuSuperior from '@/components/MenuSuperior.vue'
+import ToolBar from '@/components/ToolBar.vue'
 </script>
 
 <template>
-  <MenuSuperior />
-  <ListagemProdutos />
+  <div class="tudo">
+    <div class="container">
+      <ToolBar class="tool-bar" />
+    </div>
+    <div class="right">
+      <MenuSuperior class="menu" />
+      <ListagemProdutos class="produtos" />
+    </div>
+  </div>
 </template>
+<style scoped>
+.tudo {
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
+
+.tool-bar {
+  height: 100%;
+}
+
+.menu {
+  height: 4vw !important;
+}
+.produtos {
+  widows: 80%;
+}
+</style>

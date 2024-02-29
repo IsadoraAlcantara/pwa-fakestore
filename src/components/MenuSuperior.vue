@@ -6,8 +6,8 @@ import Account from 'vue-material-design-icons/Account.vue'
 import Menu from 'vue-material-design-icons/Menu.vue'
 import Home from 'vue-material-design-icons/Home.vue'
 import DiamondStone from 'vue-material-design-icons/DiamondStone.vue'
-import HumanMale from 'vue-material-design-icons/HumanMale.vue'
-import HumanFemale from 'vue-material-design-icons/HumanFemale.vue'
+import FaceManOutline from 'vue-material-design-icons/FaceManOutline.vue'
+import FaceWomanOutline from 'vue-material-design-icons/FaceWomanOutline.vue'
 import MonitorCellphone from 'vue-material-design-icons/MonitorCellphone.vue'
 
 const menuAberto = ref(false)
@@ -17,10 +17,13 @@ const menuAberto = ref(false)
     <div class="header--logo">
       <img src="@/assets/logoFakeStore.png" alt="Logo" />
     </div>
+    <div class="title">
+      <h1>Produtos</h1>
+    </div>
     <nav>
       <ul :class="menuAberto ? 'menu' : ''">
         <div class="line">
-          <Home class="icon" size="20px" @click="menuAberto = !menuAberto" />
+          <Home class="icon" size="20px" />
           <li>Home</li>
         </div>
         <div class="line">
@@ -29,20 +32,20 @@ const menuAberto = ref(false)
         </div>
         <div class="line">
           <DiamondStone class="icon" size="20px" @click="menuAberto = !menuAberto" />
-          <li>Jóias</li>
+          <li>Joias</li>
         </div>
         <div class="line">
-          <HumanMale class="icon" size="20px" @click="menuAberto = !menuAberto" />
+          <FaceManOutline class="icon" size="20px" @click="menuAberto = !menuAberto" />
           <li>Masculino</li>
         </div>
         <div class="line">
-          <HumanFemale class="icon" size="20px" @click="menuAberto = !menuAberto" />
+          <FaceWomanOutline class="icon" size="20px" @click="menuAberto = !menuAberto" />
           <li>Feminino</li>
-        </div>  
+        </div>
       </ul>
     </nav>
     <div class="header--icons">
-      <Account class="icon-nav"/>
+      <Account class="icon-nav" />
       <CartPlus class="icon-nav" />
       <Menu class="menu-hamburger icon-nav" @click="menuAberto = !menuAberto" />
     </div>
@@ -50,31 +53,21 @@ const menuAberto = ref(false)
 </template>
 <style scoped>
 header {
-  background: #fff;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 0.2rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header--logo {
-  display: flex;
-  align-items: center;
-}
-.header--logo img {
-  width: 3rem;
-  height: 3rem;
-  margin-right: 0.5rem;
-}
 nav ul {
-  display: flex;
+  display: none;
   gap: 1rem;
 }
+
 nav li {
   list-style: none;
   font-weight: 500;
-  color: #5155A6 ;
+  color: #5155a6;
 }
 
 .header--icons {
@@ -90,12 +83,43 @@ nav li {
 }
 
 .icon-nav {
-  color: #5155A6;
+  color: #5155a6;
+}
+
+.header--logo {
+  display: none;
+}
+
+.title {
+  margin: 1vw;
+  display: flex;
+}
+.title h1 {
+  color: #5155a6;
 }
 
 @media (max-width: 768px) {
+  header {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 50vw;
+    background-color: red;
+  }
+
   nav ul {
     display: none;
+  }
+
+  .title {
+    display: none;
+  }
+  .header--logo {
+    display: flex;
+    align-items: center;
+  }
+  .header--logo img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.5rem;
   }
   .menu-hamburger {
     display: block;
@@ -123,13 +147,14 @@ nav li {
     padding-left: 1vw;
   }
 
-.line .icon, .line li {
-  color: #4f4f50;
-}
+  .line .icon,
+  .line li {
+    color: #797E8C;
+  }
 
-
-.line:hover > .icon, .line:hover > li {
-    color: #5155A6;
+  .line:hover > .icon,
+  .line:hover > li {
+    color: white;
   }
   .line {
     display: flex;
@@ -138,7 +163,7 @@ nav li {
   }
 
   .line:hover {
-    background-color: #EFEFEF;
+    background-color: #5D5ABF;
     border-radius: 5px;
   }
 }

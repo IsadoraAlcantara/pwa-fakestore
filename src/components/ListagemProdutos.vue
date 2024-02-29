@@ -31,6 +31,7 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`
 @media (max-width: 768px) {
   .container {
     gap: 0.5rem;
+    background-color: blue;
   }
   .card {
     width: 90% !important;
@@ -39,6 +40,7 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`
   .card--avatar {
     width: 12rem !important;
   }
+  
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -49,6 +51,10 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`
   .card--avatar {
     width: 34rem;
   }
+
+  .title {
+    display: flex;
+  }
 }
 
 .text {
@@ -57,7 +63,8 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`
 
 .title {
   margin: 2vw 0 0 2.5vw;
-  color: #5155A6 ;
+  color: #5155A6;
+  display: none;
 }
 
 .description {
@@ -80,8 +87,8 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`
   padding: 2vw;
   display: flex;
   justify-content: space-between;
-  width: 40rem;
-  height: 21rem;
+  width: 32rem;
+  height: 17rem;
   background: #F4F4FE;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10px;
@@ -90,8 +97,8 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`
 }
 
 .card--avatar {
-  width: 17vw;
-  height: 17rem;
+  width: 13vw;
+  height: 13rem;
   object-fit: cover;
   margin-bottom: 0.5rem;
   border-radius: 2vw;
