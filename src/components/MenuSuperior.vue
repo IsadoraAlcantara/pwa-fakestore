@@ -42,18 +42,16 @@ const menuAberto = ref(false)
       </ul>
     </nav>
     <div class="header--icons">
-      <Account />
-      <CartPlus />
-      <Menu class="menu-hamburger" @click="menuAberto = !menuAberto" />
+      <Account class="icon-nav"/>
+      <CartPlus class="icon-nav" />
+      <Menu class="menu-hamburger icon-nav" @click="menuAberto = !menuAberto" />
     </div>
   </header>
 </template>
 <style scoped>
 header {
   background: #fff;
-  box-shadow:
-    0 10px 20px rgba(0, 0, 0, 0.19),
-    0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 0.2rem 1rem;
   display: flex;
   justify-content: space-between;
@@ -75,6 +73,8 @@ nav ul {
 }
 nav li {
   list-style: none;
+  font-weight: 500;
+  color: #5155A6 ;
 }
 
 .header--icons {
@@ -89,6 +89,10 @@ nav li {
   display: none;
 }
 
+.icon-nav {
+  color: #5155A6;
+}
+
 @media (max-width: 768px) {
   nav ul {
     display: none;
@@ -100,7 +104,6 @@ nav li {
   .icon {
     display: block;
   }
-
   nav .menu {
     height: 37%;
     display: flex;
@@ -126,7 +129,7 @@ nav li {
 
 
 .line:hover > .icon, .line:hover > li {
-    color: #222629;
+    color: #5155A6;
   }
   .line {
     display: flex;
