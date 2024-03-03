@@ -91,7 +91,7 @@ nav li {
 }
 
 .title {
-  margin: 1vw;
+  margin: 2vw;
   display: flex;
 }
 .title h1 {
@@ -101,8 +101,7 @@ nav li {
 @media (max-width: 768px) {
   header {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    height: 50vw;
-    background-color: red;
+    height: 10vw !important;
   }
 
   nav ul {

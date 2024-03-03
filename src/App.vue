@@ -21,12 +21,18 @@ import ToolBar from '@/components/ToolBar.vue'
   grid-template-columns: 15% 85%;
 }
 
+@media (max-width: 768px) {
+  .tudo {
+    grid-template-columns: 100%;
+  }
+}
+
 .tool-bar {
   height: 100%;
 }
 
 .menu {
-  height: 4vw !important;
+  height: 4vw;
 }
 .produtos {
   widows: 80%;

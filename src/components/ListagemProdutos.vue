@@ -1,14 +1,14 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-import axios from 'axios'
-const produtos = ref([])
+import { ref, onMounted } from "vue";
+import axios from "axios";
+const produtos = ref([]);
 
 onMounted(async () => {
-  const response = await axios.get('https://fakestoreapi.com/products')
-  produtos.value = response.data
-})
+  const response = await axios.get("https://fakestoreapi.com/products");
+  produtos.value = response.data;
+});
 
-const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`
+const formatPrice = (price) => `R$ ${price.toFixed(2).replace(".", ",")}`;
 </script>
 <template>
   <div>
@@ -21,7 +21,10 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`
         <div class="text">
           <h1 class="card--title">{{ produto.title }}</h1>
           <p class="description">{{ produto.description }}</p>
-          <p class="price">{{ formatPrice(produto.price) }}</p>
+          <div class="card-details">
+            <button>Saiba mais</button>
+            <p class="price">{{ formatPrice(produto.price) }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -29,18 +32,14 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`
 </template>
 <style scoped>
 @media (max-width: 768px) {
-  .container {
-    gap: 0.5rem;
-    background-color: blue;
-  }
   .card {
     width: 90% !important;
+    height: 33vh !important;
   }
 
   .card--avatar {
     width: 12rem !important;
   }
-  
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -63,12 +62,14 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`
 
 .title {
   margin: 2vw 0 0 2.5vw;
-  color: #5155A6;
+  color: #5155a6;
   display: none;
 }
 
 .description {
-  color: #565D73;
+  color: #565d73;
+  height: 12vh;
+  overflow: hidden;
 }
 
 .price {
@@ -89,7 +90,7 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`
   justify-content: space-between;
   width: 32rem;
   height: 17rem;
-  background: #F4F4FE;
+  background: #f4f4fe;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10px;
   margin: auto;
@@ -109,5 +110,23 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`
   text-transform: capitalize;
   font-size: 1.1rem;
   margin-top: 0.5rem;
+}
+
+.card-details {
+  display: flex;
+  gap: 10%;
+}
+
+button {
+  background-color: #7e81bf;
+  color: white;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 8px;
+  margin-top: 0.5vw;
+}
+
+button:hover {
+  background-color: #5155a6;
 }
 </style>
