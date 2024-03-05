@@ -9,6 +9,9 @@ import DiamondStone from 'vue-material-design-icons/DiamondStone.vue'
 import FaceManOutline from 'vue-material-design-icons/FaceManOutline.vue'
 import FaceWomanOutline from 'vue-material-design-icons/FaceWomanOutline.vue'
 import MonitorCellphone from 'vue-material-design-icons/MonitorCellphone.vue'
+import { useScreen } from '@/composables/screen'
+
+const { browserWidth, deviceWidth, isMobile } = useScreen()
 
 const menuAberto = ref(false)
 </script>
@@ -18,7 +21,10 @@ const menuAberto = ref(false)
       <img src="@/assets/logoFakeStore.png" alt="Logo" />
     </div>
     <div class="title">
-      <h1>Produtos</h1>
+      <h1>
+        Produtos - {{ browserWidth }} - {{ deviceWidth }} - {{ isMobile }}
+        <span v-if="isMobile">É móvel</span>
+      </h1>
     </div>
     <nav>
       <ul :class="menuAberto ? 'menu' : ''">
@@ -148,7 +154,7 @@ nav li {
 
   .line .icon,
   .line li {
-    color: #797E8C;
+    color: #797e8c;
   }
 
   .line:hover > .icon,
@@ -162,7 +168,7 @@ nav li {
   }
 
   .line:hover {
-    background-color: #5D5ABF;
+    background-color: #5d5abf;
     border-radius: 5px;
   }
 }

@@ -2,6 +2,7 @@
 import ListagemProdutos from '@/components/ListagemProdutos.vue'
 import MenuSuperior from '@/components/MenuSuperior.vue'
 import ToolBar from '@/components/ToolBar.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import ToolBar from '@/components/ToolBar.vue'
     <div class="right">
       <MenuSuperior class="menu" />
       <ListagemProdutos class="produtos" />
+      <FooterComponent />
     </div>
   </div>
 </template>
