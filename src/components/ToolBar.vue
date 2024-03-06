@@ -58,6 +58,7 @@ import MonitorCellphone from 'vue-material-design-icons/MonitorCellphone.vue'
 }
 .tool-bar {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 30vh;
 }
 .header--logo {
   display: flex;

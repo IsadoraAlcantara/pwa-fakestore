@@ -17,6 +17,7 @@ const menuAberto = ref(false)
 </script>
 <template>
   <header>
+
     <div class="header--logo">
       <img src="@/assets/logoFakeStore.png" alt="Logo" />
     </div>
@@ -25,6 +26,7 @@ const menuAberto = ref(false)
         Produtos - {{ browserWidth }} - {{ deviceWidth }} - {{ isMobile }}
         <span v-if="isMobile">É móvel</span>
       </h1>
+      <span id='topo'></span>
     </div>
     <nav>
       <ul :class="menuAberto ? 'menu' : ''">
