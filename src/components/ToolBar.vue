@@ -49,7 +49,7 @@ import MonitorCellphone from 'vue-material-design-icons/MonitorCellphone.vue'
   list-style: none;
 }
 .line:hover {
-  background-color: #5D5ABF;
+  background-color: #7e81bf;
   border-radius: 5px;
 }
 

@@ -3,6 +3,7 @@ import ListagemProdutos from '@/components/ListagemProdutos.vue'
 import MenuSuperior from '@/components/MenuSuperior.vue'
 import ToolBar from '@/components/ToolBar.vue'
 import FooterComponent from '@/components/Footer/FooterComponent.vue'
+
 </script>
 
 <template>
@@ -12,9 +13,9 @@ import FooterComponent from '@/components/Footer/FooterComponent.vue'
     </div>
     <div class="right">
       <MenuSuperior class="menu" />
-      <ListagemProdutos class="produtos" />
+      <ListagemProdutos class="produtos" /> 
+      </div>
     </div>
-  </div>
       <FooterComponent class="footer" />
 </template>
 <style scoped>
