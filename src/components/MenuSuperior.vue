@@ -170,7 +170,7 @@ nav li {
   }
 
   .line:hover {
-    background-color: #5d5abf;
+    background-color: #7e81bf;
     border-radius: 5px;
   }
 }

@@ -92,7 +92,7 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace(".", ",")}`;
   padding: 2vw;
   display: flex;
   justify-content: space-between;
-  width: 32rem;
+  width: 35vw;
   height: 17rem;
   background: #f4f4fe;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
