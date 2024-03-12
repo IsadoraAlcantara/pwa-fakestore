@@ -1,9 +1,6 @@
 <script setup>
 import ButtonBack from './ButtonBack.vue'
 
-const scrollTop = function() {
-    window.scrollTo(0, 0);
-};
 </script>
 <template>
   <ButtonBack />

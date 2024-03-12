@@ -23,7 +23,7 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace(".", ",")}`;
           <img class="card--avatar" :src="produto.image" :alt="produto.title" />
         </div>
         <div class="text">
-          <h1 class="card--title">{{ produto.title }}</h1>
+          <h2 class="card--title">{{ produto.title }}</h2>
           <p class="description">{{ produto.description.slice(0, 70) + "..." }}</p>
           <div class="card-details">
             <button>Saiba mais</button>
@@ -51,13 +51,38 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace(".", ",")}`;
   .card {
     width: 22rem;
   }
-
+  
   .card--avatar {
     width: 34rem;
   }
 
   .title {
     display: flex;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 970px) {
+  .card {
+      width: 35vw !important;
+      height: 23vw !important;
+  }
+
+  .card--title {
+    font-size: 1rem !important;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .card-details {
+    font-size: 0.8rem !important;
+    margin-top: 1vw !important;
+  }
+
+  button {
+    height: 4vw;
+    font-size: 0.7rem;
   }
 }
 
@@ -68,7 +93,7 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace(".", ",")}`;
 .title {
   margin: 2vw 0 0 2.5vw;
   color: #5155a6;
-  display: none;
+  display: none;  
 }
 
 .description {
@@ -82,9 +107,7 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace(".", ",")}`;
 .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
+  gap: 1rem;  align-items: center;
   margin: auto;
   padding: 1rem 0;
 }
@@ -104,7 +127,7 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace(".", ",")}`;
 .card--avatar {
   width: 13vw;
   height: 13rem;
-  object-fit: cover;
+  object-fit: contain;
   margin-bottom: 0.5rem;
   border-radius: 2vw;
 }

@@ -11,8 +11,8 @@ const { isMobile } = useScreen();
 </script>
 
 <template>
-  <div class="tudo">
-    <div class="container">
+  <div class="main-container">
+    <div>
       <ToolBar class="tool-bar" />
     </div>
     <div class="right">
@@ -23,13 +23,13 @@ const { isMobile } = useScreen();
       <FooterComponent v-if="!isMobile" class="footer" />
 </template>
 <style scoped>
-.tudo {
+.main-container {
   display: grid;
   grid-template-columns: 15% 85%;
 }
 
 @media (max-width: 768px) {
-  .tudo {
+  .main-container {
     grid-template-columns: 100%;
   }
 }

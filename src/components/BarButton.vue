@@ -21,6 +21,10 @@ import InformationOutline from 'vue-material-design-icons/InformationOutline.vue
     align-items: center;
     justify-content: center;
     gap: 17vw;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
 }
 
 .icon:hover {
