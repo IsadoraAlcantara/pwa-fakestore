@@ -16,7 +16,6 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace(".", ",")}`;
 </script>
 <template>
   <div>
-    <h1 class="title">Produtos</h1>
     <div class="container">
       <div class="card" v-for="produto in produtos" :key="produto.id">
         <div>
@@ -39,11 +38,33 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace(".", ",")}`;
 @media (max-width: 768px) {
   .card {
     width: 90% !important;
-    height: 33vh !important;
+    height: 25vh !important;
   }
 
   .card--avatar {
     width: 12rem !important;
+  }
+
+  button {
+    height: 10vw;
+    text-wrap: nowrap;
+  }
+
+  .card--title {
+    font-size: 1rem !important;
+  }
+
+  .description {
+    font-size: 0.9rem !important;
+    margin-top: 0 !important; 
+  }
+
+  .price {
+    font-size: 0.8rem !important;
+  }
+
+  .container {
+    margin: 7vw 0 20vw 0 !important;
   }
 }
 
@@ -75,11 +96,6 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace(".", ",")}`;
     font-size: 0.8rem;
   }
 
-  .card-details {
-    font-size: 0.8rem !important;
-    margin-top: 1vw !important;
-  }
-
   button {
     height: 4vw;
     font-size: 0.7rem;
@@ -90,15 +106,9 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace(".", ",")}`;
   width: 50%;
 }
 
-.title {
-  margin: 2vw 0 0 2.5vw;
-  color: #5155a6;
-  display: none;  
-}
-
 .description {
   color: #565d73;
-  height: 12vh;
+  margin-bottom: 1vw;
 }
 
 .price {
@@ -109,7 +119,6 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace(".", ",")}`;
   flex-wrap: wrap;
   gap: 1rem;  align-items: center;
   margin: auto;
-  padding: 1rem 0;
 }
 .card {
   padding: 2vw;
@@ -120,7 +129,7 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace(".", ",")}`;
   background: #f4f4fe;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10px;
-  margin: auto;
+  margin: 0 0 2vw 3vw;
   overflow: hidden;
 }
 

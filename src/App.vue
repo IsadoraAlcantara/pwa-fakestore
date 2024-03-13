@@ -4,10 +4,9 @@ import MenuSuperior from '@/components/MenuSuperior.vue'
 import ToolBar from '@/components/ToolBar.vue'
 import FooterComponent from '@/components/Footer/FooterComponent.vue'
 
-import { useScreen } from '@/composables/screen';
+import { useScreen } from '@/composables/screen'
 
-const { isMobile } = useScreen();
-
+const { isMobile } = useScreen()
 </script>
 
 <template>
@@ -15,12 +14,16 @@ const { isMobile } = useScreen();
     <div>
       <ToolBar class="tool-bar" />
     </div>
-    <div class="right">
-      <MenuSuperior class="menu" />
-      <ListagemProdutos class="produtos" /> 
-      </div>
+    <div>
+      <MenuSuperior />
+      <component :is="menu" />
+      <main>
+        <router-view />
+      </main>
     </div>
-      <FooterComponent v-if="!isMobile" class="footer" />
+  </div>
+
+  <FooterComponent v-if="!isMobile" class="footer" />
 </template>
 <style scoped>
 .main-container {
